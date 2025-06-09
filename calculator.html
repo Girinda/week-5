@@ -13,19 +13,19 @@
                   <td onclick="digitbtnPressed"(7)>7</td>
                   <td onclick="digitbtnPressed"(8)>8</td>
                   <td onclick="digitbtnPressed"(9)>9</td>
-                  <td>×</td>
+                  <td OperatorbtnPressed("×")>×</td>
              </tr>
              <tr>
                   <td onclick="digitbtnPressed"(4)>4</td>
                   <td onclick="digitbtnPressed"(5)>5</td>
                   <td onclick="digitbtnPressed"(6)>6</td>
-                  <td>-</td>
+                  <td OperatorbtnPressed("-")>-</td>
              </tr>
              <tr>
                   <td onclick="digitbtnPressed"(1)>1</td>
                   <td onclick="digitbtnPressed"(2)>2</td>
                   <td onclick="digitbtnPressed"(3)>3</td>
-                  <td>+</td>
+                  <td onclick = OperatorbtnPressed("+")>+</td>
              </tr>
                   <td calspan="2"onclick=figitbuttenPressed>0</td>
 
@@ -38,9 +38,11 @@
 
          <script>
                var newline= true;
+               var value1 
+               var   current Operator
 
 
-              function digitbtnPressed(button){
+         function digitbtnPressed(button){
               
               if (newline){document.getelementbyId("inputbox").value= button;}
               newline = false;
@@ -53,6 +55,11 @@
           function btnACPressed(){
          document.getelementbyId("inputbox").value = 0;
           newline = true; }
+
+        function OperatorbtnPressed(operator){
+             cureentOperator = operator; value1 = parseInt(document.getelementbyId("inputbox").value); 
+          newline = true;
+}
 
 
          </script>
