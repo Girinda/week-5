@@ -27,8 +27,9 @@
                   <td onclick="digitbtnPressed"(3)>3</td>
                   <td>+</td>
              </tr>
-                  <td calspan="2">0</td>
-                  <td>AC</td>
+                  <td calspan="2"onclick=figitbuttenPressed>0</td>
+
+                  <td onclick= btnACPressed()>AC</td>
                   <td>/</td>
              <tr>
                   <td calspan="4">=</td>
@@ -36,8 +37,22 @@
          </table>
 
          <script>
+               var newline= true;
 
-              function digitbtnpressed(button){var currentvalue= document.getelementbyId}("inputbox").value; document.getelementbyId("inputbox").value= currentvalue + button;}
+
+              function digitbtnPressed(button){
+              
+              if (newline){document.getelementbyId("inputbox").value= button;}
+              newline = false;
+        else {
+            var currentvalue= document.getelementbyId("inputbox").value;
+ document.getelementbyId("inputbox").value= currentvalue + button;} 
+
+}
+
+          function btnACPressed(){
+         document.getelementbyId("inputbox").value = 0;
+          newline = true; }
 
 
          </script>
