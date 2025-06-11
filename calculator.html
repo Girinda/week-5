@@ -32,7 +32,7 @@
                   <td onclick= btnACPressed()>AC</td>
                   <td OperatorbtnPressed("÷")>÷</td>
              <tr>
-                  <td calspan="4">=</td>
+                  <td calspan="4" onclick="equalsbtnPressed"()>=</td>
              <tr/>
          </table>
 
@@ -57,10 +57,37 @@
           newline = true; }
 
         function OperatorbtnPressed(operator){
-             cureentOperator = operator; value1 = parseInt(document.getelementbyId("inputbox").value); 
+             currentOperator = operator; value1 = parseInt(document.getelementbyId("inputbox").value); 
           newline = true;
 }
 
+         function equalsbtnPressed(){ 
+            var value2= parsein(document.getelementbyId("inputbox").value);
+            var finalTotal; 
+
+            switch(currentOperator){
+                  case "+":
+                     finalTotal = value1 + value2; 
+                     break;
+
+                  case "-":
+                     finalTotal = value1 + value2; 
+                     break;
+
+                  case "/":
+                     finalTotal = value1 + value2; 
+                     break;
+
+                  case "×":
+                     finalTotal = value1 + value2; 
+                     break;
+                  
+}
+             document.getelementbyId("inputbox").value = finalTotal; 
+
+               value1 = 0; 
+               newline = true;
+}
 
          </script>
 
